@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Top 5 Bahasa Pemrograman Industri Paling Populer - JagoAlgo Blog</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="hidescrollbar.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { light: '#EEF2FF', primary: '#4F46E5', dark: '#312E81', fun: '#FBBF24', funhover: '#F59E0B' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .article-content p { 
+            margin-bottom: 1.5rem; 
+            line-height: 1.8; 
+            color: #4B5563; 
+            font-size: 1rem; 
+        }
+        @media (min-width: 768px) {
+            .article-content p {
+                font-size: 1.125rem;
+            }
+        }
+        .article-content h2 { 
+            margin-top: 2.5rem; 
+            margin-bottom: 1.25rem; 
+            font-weight: 700; 
+            color: #111827; 
+            font-size: 1.5rem; 
+        }
+        @media (min-width: 768px) {
+            .article-content h2 {
+                font-size: 1.875rem; 
+            }
+        }
+        .lang-logo-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 2.5rem; }
+        .lang-logo { height: 120px; width: auto; object-fit: contain; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-indigo-100/95 backdrop-blur-md shadow-md border-b border-indigo-200">
+        <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center my-1 md:my-2">
+            
+            <a href="index.html" class="text-2xl md:text-4xl font-bold text-brand-primary flex items-center gap-2">
+                JagoAlgo
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium transition text-lg">Beranda</a>
+                <a href="catalogue.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium transition text-lg">Katalog</a>
+                <a href="blog.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium transition text-lg">Blog</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium transition text-lg">Tentang Kami</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-primary text-white rounded-full font-semibold hover:bg-brand-dark transition shadow-lg shadow-indigo-500/30 text-lg">Hubungi Kami</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-brand-primary focus:outline-none transition p-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-indigo-50 border-t border-indigo-200 shadow-xl transition-all duration-300 ease-in-out">
+            <div class="flex flex-col px-4 md:px-6 py-5 md:py-6 space-y-4">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Beranda</a>
+                <a href="catalogue.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Katalog</a>
+                <a href="blog.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Blog</a>
+                <a href="about.html" class="nav-link text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Tentang Kami</a>
+                <a href="contact.html" class="inline-block text-center w-full px-5 py-3 bg-brand-primary text-white rounded-xl font-semibold hover:bg-brand-dark transition shadow-md text-base mt-2">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="md:hidden pt-24 pb-4 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <a href="blog.html" 
+            class="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-brand-primary transition"
+            aria-label="Kembali ke halaman blog">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Kembali ke Blog
+            </a>
+        </div>
+    </div>
+
+    <main class="flex-grow pt-6 md:pt-40 pb-16 md:pb-20">
+        <article class="container mx-auto px-4 md:px-6 max-w-4xl">
+            
+            <header class="mb-8 md:mb-12">
+                <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                    <span class="bg-brand-light text-brand-primary px-3 py-1 md:px-4 md:py-1 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider">Teknologi</span>
+                    <span class="text-gray-400 text-xs md:text-sm">22 April 2026</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6 md:mb-8">
+                    Top 5 <span class="text-brand-primary">Bahasa Pemrograman</span> Paling Sering Digunakan di Industri
+                </h1>
+                <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Programming Background" class="w-full h-56 md:h-80 lg:h-[400px] object-cover rounded-2xl md:rounded-3xl shadow-xl md:shadow-2xl mb-8 md:mb-12">
+            </header>
+
+            <div class="article-content">
+                <p class="text-lg md:text-xl font-medium text-gray-700 italic border-l-4 border-brand-primary pl-4 md:pl-6 mb-8 md:mb-10">
+                    Memasuki dunia teknologi seringkali terasa seperti berdiri di depan persimpangan dengan ratusan papan petunjuk. Memilih <b>bahasa pemrograman</b> yang tepat adalah langkah awal yang sangat krusial saat kamu mulai belajar pemrograman secara serius.
+                </p>
+
+                <p>Memiliki pemahaman dasar yang kuat tidak hanya sekadar memudahkanmu dalam membuat sebuah aplikasi dari nol, tetapi juga menjamin bahwa keahlian yang kamu bangun akan terus relevan dengan tuntutan industri teknologi. Banyak orang membuang waktu mempelajari alat yang jarang dipakai. Berikut adalah lima <b>bahasa pemrograman</b> yang secara konsisten mendominasi industri perangkat lunak global saat ini:</p>
+
+                <hr class="my-4 md:my-8 border-gray-300">
+
+                <section class="mb-8 md:mb-12">
+                    <h2 class="text-left">1. Python: AI dan Otomatisasi</h2>
+                    <div class="lang-logo-container" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <img src="images/Artikel22.png" alt="Python Logo" class="lang-logo">
+                        <span class="text-xs md:text-sm text-gray-400 italic mt-2">Python</span>
+                    </div>
+                    <p>Dikenal luas oleh komunitas global karena sintaksnya, Python merupakan <b>bahasa pemrograman</b> tingkat tinggi yang mudah dibaca dan dipahami. Bahasa ini, khususnya dalam praktik <b>pemrograman Python</b>, seringkali menjadi rekomendasi paling pertama dan utama sebagai <b>bahasa pemrograman</b> untuk pemula.</p>
+                    <p>Sintaks Python terbukti sangat bertenaga untuk mengeksekusi komputasi kompleks. Perusahaan teknologi raksasa mengandalkannya secara masif untuk kebutuhan krusial seperti pengolahan Data Science, pemodelan Machine Learning, hingga otomatisasi sistem peladen.</p>
+                </section>
+
+                <section class="mb-8 md:mb-12">
+                    <h2 class="text-left">2. JavaScript: Aplikasi dan Web Interaktif</h2>
+                    <div class="lang-logo-container" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <img src="images/Artikel23.png" alt="JavaScript Logo" class="lang-logo rounded">
+                        <span class="text-xs md:text-sm text-gray-400 italic mt-2">JavaScript</span>
+                    </div>
+                    <p>Hampir mustahil menemukan website dinamis dan interaktif di era modern ini yang berjalan tanpa campur tangan JavaScript. Menguasai alur logika dan algoritma menggunakan JavaScript, khususnya penguasaan <b>pemrograman JavaScript</b>, adalah keterampilan yang mutlak dimiliki, baik bagi seorang front-end, back-end, maupun full-stack developer.</p>
+                    <p>Ekosistem perpustakaan kodenya yang sangat luas, ditambah dengan ragam framework mutakhir seperti React atau Node.js, menjadikannya salah satu <b>bahasa pemrograman</b> yang populer dan tidak pernah sepi peminat di bursa kerja startup maupun perusahaan multinasional.</p>
+                </section>
+
+                <section class="mb-8 md:mb-12">
+                    <h2 class="text-left">3. Rust: Performa dan Keamanan Sistem</h2>
+                    <div class="lang-logo-container" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <img src="images/Artikel24.png" alt="Rust Logo" class="lang-logo">
+                        <span class="text-xs md:text-sm text-gray-400 italic mt-2">Rust</span>
+                    </div>
+                    <p>Ketika sebuah industri perangkat lunak membutuhkan performa tingkat tinggi, kecepatan eksekusi kilat, dan kontrol memori yang ketat yang biasanya hanya dapat dicapai oleh <b>bahasa pemrograman</b> tingkat rendah, Rust hadir sebagai solusi modern yang revolusioner. Rust, melalui arsitektur <b>pemrograman Rust</b>, mampu memberikan kecepatan komputasi setingkat mesin namun dengan jaminan keamanan sistem yang jauh lebih superior.</p>
+                    <p>Kemampuannya dalam mencegah bug fatal yang sering merugikan perusahaan membuat Rust kini menjadi primadona baru, terutama bagi infrastruktur sistem yang mengutamakan keamanan berlapis.</p>
+                </section>
+
+                <section class="mb-8 md:mb-12">
+                    <h2 class="text-left">4. Java: Adopsi Korporasi</h2>
+                    <div class="lang-logo-container" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <img src="images/Artikel25.png" alt="Java Logo" class="lang-logo">
+                        <span class="text-xs md:text-sm text-gray-400 italic mt-2">Java</span>
+                    </div>
+                    <p>Meski usianya sudah tidak muda, Java tetap kokoh berdiri sebagai tulang punggung dari banyak sistem enterprise perbankan, instansi pemerintah, dan aplikasi Android berskala besar. Konsep Pemrograman Berorientasi Objek di dalamnya sangat terstruktur dan ketat.</p>
+                    <p>Karena strukturnya yang ketat (OOP), banyak sekali akademi maupun universitas yang menggunakan Java sebagai <b>bahasa pemrograman</b> utama, mengingat <b>pemrograman Java</b> sangat relevan untuk melatih kedisiplinan developer dalam merancang perangkat lunak.</p>
+                </section>
+
+                <section class="mb-8 md:mb-12">
+                    <h2 class="text-left">5. PHP: Content Management System</h2>
+                    <div class="lang-logo-container" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                        <img src="images/Artikel26.png" alt="PHP Logo" class="lang-logo">
+                        <span class="text-xs md:text-sm text-gray-400 italic mt-2">PHP</span>
+                    </div>
+                    <p>Faktanya, PHP masih setia menggerakkan lebih dari separuh backend website di seluruh dunia. Dominasinya sangat terasa di balik sistem manajemen konten raksasa penyokong internet seperti WordPress. Kemudahan konfigurasinya dan proses integrasi yang sangat mulus membuat <b>bahasa pemrograman</b> ini, terutama dalam ekosistem <b>pemrograman PHP</b>, tetap sangat relevan bagi mereka yang menargetkan karir sebagai freelancer atau di agency.</p>
+                </section>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 md:py-12 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-4 md:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-8">
+                
+               <div class="space-y-3 md:space-y-4">
+                    <a href="index.html" class="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
+                        JagoAlgo
+                    </a>
+                    <p class="text-sm md:text-lg leading-relaxed pr-4 md:pr-0">
+                        Platform belajar coding online yang mengubah kerumitan menjadi keseruan. Siapapun bisa ngoding!
+                    </p>
+                    
+                    <div class="pt-2 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <p class="text-sm md:text-base leading-relaxed text-gray-400">
+                            Alfa Tower, Lt. 12<br>
+                            Jl. Jalur Sutera Bar., Alam Sutera<br>
+                            Tangerang, Banten, Indonesia 15143
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg md:text-xl mb-3 md:mb-4">Jelajahi</h3>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li>
+                            <a href="index.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="catalogue.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Katalog</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Blog</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Hubungi Kami</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-lg md:text-xl mb-3 md:mb-4">Ikuti Keseruan Kami</h3>
+                    <div class="flex flex-col space-y-2 md:space-y-3">
+
+                        <a href="https://www.instagram.com/jagoalgo.id/" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-purple-600 text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">@jagoalgo.id</span>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-blue-600 text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">JagoAlgo Indonesia</span>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-black group-hover:border-gray-600 border border-transparent text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-3 h-3 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">@jagoalgo</span>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-red-600 text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">JagoAlgo Academy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+                <p class="text-xs md:text-md text-center md:text-left">&copy; 2026 JagoAlgo - Platform Belajar Coding Online Terpercaya.</p>
+                <div class="flex space-x-4 md:space-x-6 text-xs md:text-md">
+                    <a href="about.html#faq" class="hover:text-white transition">FAQ</a>
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentPath = window.location.pathname.split('/').pop();
+            if (currentPath === '') currentPath = 'index.html'; 
+
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const linkHref = link.getAttribute('href');
+                
+                if (linkHref === currentPath) {
+                    link.classList.remove('text-gray-600', 'font-medium');
+                    link.classList.add('text-brand-primary', 'font-bold');
+                }
+            });
+
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+    </body>
+</html>

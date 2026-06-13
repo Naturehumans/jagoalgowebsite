@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JagoAlgo: Cara Belajar Coding Pemula yang Menyenangkan</title>
+    <meta name="description"
+        content="Cari tempat belajar coding online yang seru? JagoAlgo solusinya. Kami ajarkan programming dasar, Python, hingga Web Dev dengan learning path fleksibel. Yuk, mulai ngoding!">
+    <meta name="keywords"
+        content="belajar coding, coding online, programming dasar, kelas coding, belajar programming, ngoding, belajar python, jagoalgo, belajar coding dari nol, cara belajar coding pemula">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="hidescrollbar.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: { light: '#EEF2FF', primary: '#4F46E5', dark: '#312E81', fun: '#FBBF24', funhover: '#F59E0B' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-indigo-100/95 backdrop-blur-md shadow-md border-b border-indigo-200">
+        <div class="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center my-1 md:my-2">
+            
+            <a href="index.html" class="text-2xl md:text-4xl font-bold text-brand-primary flex items-center gap-2">
+                JagoAlgo
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-primary font-bold transition text-lg">Beranda</a>
+                <a href="catalogue.html" class="text-gray-600 hover:text-brand-primary font-medium transition text-lg">Katalog</a>
+                <a href="blog.html" class="text-gray-600 hover:text-brand-primary font-medium transition text-lg">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-brand-primary font-medium transition text-lg">Tentang Kami</a>
+                <a href="contact.html" class="px-5 py-2 bg-brand-primary text-white rounded-full font-semibold hover:bg-brand-dark transition shadow-lg shadow-indigo-500/30 text-lg">Hubungi Kami</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-brand-primary focus:outline-none transition p-1">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-indigo-50 border-t border-indigo-200 shadow-xl transition-all duration-300 ease-in-out">
+            <div class="flex flex-col px-4 md:px-6 py-5 md:py-6 space-y-4">
+                <a href="index.html" class="text-brand-primary font-bold text-base block border-b border-indigo-100 pb-2">Beranda</a>
+                <a href="catalogue.html" class="text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Katalog</a>
+                <a href="blog.html" class="text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Blog</a>
+                <a href="about.html" class="text-gray-600 hover:text-brand-primary font-medium text-base block border-b border-indigo-100 pb-2">Tentang Kami</a>
+                <a href="contact.html" class="inline-block text-center w-full px-5 py-3 bg-brand-primary text-white rounded-xl font-semibold hover:bg-brand-dark transition shadow-md text-base mt-2">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+<section class="pt-[8rem] pb-16 bg-brand-light">
+    <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+        
+        <div class="md:w-1/2 space-y-6">
+            <span
+                class="px-4 py-1 bg-white text-brand-primary rounded-full text-lg font-bold shadow-sm border border-indigo-100">
+                #1 Platform Belajar Coding Online
+            </span>
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+                Cara <span class="text-brand-primary">Belajar Coding Pemula</span> yang Nggak Bikin Pusing
+            </h1>
+            <p class="text-base md:text-xl text-gray-600 leading-relaxed">
+                Ingin jago ngoding tapi bingung mulai dari mana? Di JagoAlgo, kami menyediakan kelas coding dengan
+                materi programming dasar yang dirancang khusus agar mudah dimengerti, bahkan dari nol.
+            </p>
+            <div class="flex gap-4 pt-4">
+                <a href="contact.html"
+                    class="px-5 py-3 md:px-8 md:py-4 text-base md:text-xl bg-brand-fun text-gray-900 rounded-xl font-bold hover:bg-brand-funhover transition shadow-lg">
+                    Mulai Belajar Sekarang
+                </a>
+            </div>
+        </div>
+
+        <div class="md:w-2/5">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                alt="Belajar coding online seru"
+                class="rounded-2xl shadow-2xl rotate-2 hover:rotate-0 transition duration-500 border-4 border-white">
+        </div>
+    </div>
+</section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">Materi Belajar Programming yang Fleksibel</h2>
+                <p class="text-gray-600 text-base md:text-xl">Cocok untuk kamu yang mencari belajar Python, Web Development, atau
+                    Data Science dengan kurikulum yang bisa di-adjust.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+                <div
+                    class="bg-white p-4 md:p-8 rounded-2xl shadow-lg border-t-4 border-brand-primary hover:-translate-y-2 transition duration-300">
+                    <h3 class="text-xl md:text-3xl font-bold mb-3 text-gray-900">Programming Dasar</h3>
+                    <p class="text-lg text-gray-600 mb-4">Pondasi kuat untuk kamu yang baru mulai belajar coding dari
+                        nol. Pahami logika tanpa hapalan kode.</p>
+                </div>
+                <div
+                    class="bg-white p-4 md:p-8 rounded-2xl shadow-lg border-t-4 border-brand-fun hover:-translate-y-2 transition duration-300">
+                    <h3 class="text-xl md:text-3xl font-bold mb-3 text-gray-900">Learning Path Adjustable</h3>
+                    <p class="text-lg text-gray-600 mb-4">Kurikulum kami fleksibel. Sesuaikan kecepatan belajarmu agar
+                        belajar programming tetap <em>fun</em>.</p>
+                </div>
+                <div
+                    class="bg-white p-4 md:p-8 rounded-2xl shadow-lg border-t-4 border-teal-400 hover:-translate-y-2 transition duration-300">
+                    <h3 class="text-xl md:text-3xl font-bold mb-3 text-gray-900">Kelas Coding Interaktif</h3>
+                    <p class="text-lg text-gray-600 mb-4">Lupakan video membosankan. Di sini kamu akan langsung praktik
+                        membuat proyek nyata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-24 px-4 md:px-6 bg-white overflow-hidden">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-12 items-center">
+
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-2xl md:text-5xl font-bold text-gray-900 leading-tight">
+                            Metode Belajar <span class="text-brand-primary">Interaktif</span>
+                        </h2>
+                        <p class="text-base md:text-xl text-gray-600 leading-relaxed">
+                            Lupakan video tutorial yang membosankan. Di JagoAlgo, Anda belajar dengan metode interaktif
+                            yang membuat logika coding menempel lebih lama.
+                        </p>
+                    </div>
+
+                    <ul class="space-y-5">
+                        <li class="flex items-center gap-3 text-gray-800 text-sm md:text-lg font-medium">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-indigo-100 text-brand-primary rounded-full">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            Live Coding Environment dalam Browser
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-800 text-sm md:text-lg font-medium">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-indigo-100 text-brand-primary rounded-full">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            Automated Feedback secara Real-time
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-800 text-sm md:text-lg font-medium">
+                            <span
+                                class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-indigo-100 text-brand-primary rounded-full">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            Gamification: Kumpulkan XP dan Lencana
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                    <div
+                        class="col-span-1 md:col-span-2 bg-[#1e1b4b] rounded-2xl md:rounded-3xl p-4 md:p-6 shadow-2xl border border-white/5 overflow-hidden">
+                        <div class="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="text-xs text-indigo-300/50 font-mono ml-4 tracking-widest uppercase">main.js
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                        <pre class="font-mono text-xs sm:text-sm md:text-base leading-relaxed text-indigo-100 bg-slate-900 p-4 rounded-xl">
+<code><span class="text-purple-400">function</span> <span class="text-yellow-400">welcomeToJagoAlgo</span>() {
+    <span class="text-purple-400">const</span> status = <span class="text-yellow-400">'excited'</span>;
+    <span class="text-purple-400">if</span> (status === <span class="text-yellow-400">'excited'</span>) {
+        <span class="text-blue-400">console</span>.log(<span class="text-yellow-400">"Mari mulai coding!"</span>);
+    }
+}</code>
+</pre>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-brand-primary p-4 md:p-8 rounded-2xl md:rounded-3xl flex flex-col justify-between text-white shadow-xl hover:scale-[1.02] transition-transform duration-300">
+                        <svg class="w-10 h-10 mb-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                            </path>
+                        </svg>
+                        <div>
+                            <div class="text-3xl font-bold">1,200+</div>
+                            <div class="text-sm opacity-80 font-semibold tracking-wide uppercase">Challenge Selesai
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-indigo-50 p-4 md:p-8 rounded-2xl md:rounded-3xl flex flex-col justify-between text-indigo-900 shadow-xl hover:scale-[1.02] transition-transform duration-300">
+                        <svg class="w-10 h-10 mb-4 text-brand-primary" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                        <div>
+                            <div class="text-3xl font-bold text-brand-primary">24/7</div>
+                            <div class="text-sm text-indigo-800/60 font-semibold tracking-wide uppercase">Community
+                                Support</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-light/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold mb-4">Apa Kata Mereka?</h2>
+                <p class="text-gray-600 text-xl">Ribuan siswa telah membuktikan bahwa belajar coding di JagoAlgo itu
+                    anti pusing.</p>
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-12">
+
+                <button id="prev-btn"
+                    class="flex absolute -left-3 md:-left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all border border-gray-100 focus:outline-none cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <div id="testimonial-carousel"
+                    class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 no-scrollbar scroll-smooth cursor-grab active:cursor-grabbing">
+
+                    <div
+                        class="snap-center shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white p-3 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between select-none">
+                        <div>
+                            <div class="flex text-brand-fun mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Dulu ngira Python itu susah banget, tapi mentor di
+                                sini ngajarinnya pakai perumpamaan kehidupan sehari-hari. Gampang banget nyangkut di
+                                otak!"
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-xl">
+                                A</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Aldi Pratama</h4>
+                                <p class="text-sm text-gray-500">Mahasiswa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="snap-center shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white p-3 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between select-none">
+                        <div>
+                            <div class="flex text-brand-fun mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Learning path-nya juara! Saya yang full-time kerja
+                                masih bisa ikutin kelas Web Dev tanpa merasa ketinggalan materi. Recommended banget buat
+                                pemula."
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center font-bold text-xl">
+                                S</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Siti Nurbaya</h4>
+                                <p class="text-sm text-gray-500">Karyawan Swasta</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="snap-center shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white p-3 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between select-none">
+                        <div>
+                            <div class="flex text-brand-fun mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Belajar programming dasar di JagoAlgo ngerubah mindset
+                                saya. Coding itu asik kalau tahu logikanya. Sekarang lagi nyoba bikin aplikasi pertama!"
+                            
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold text-xl">
+                                R</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Rizky Setiawan</h4>
+                                <p class="text-sm text-gray-500">Freelancer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="snap-center shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white p-3 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between select-none">
+                        <div>
+                            <div class="flex text-brand-fun mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Project interaktifnya yang bikin saya betah. Nggak
+                                cuma nonton video, tapi kita dipaksa (dengan cara seru) buat nulis kode sendiri. Top!"
+                            
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-xl">
+                                D</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Dina Lestari</h4>
+                                <p class="text-sm text-gray-500">UI/UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="snap-center shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white p-3 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between select-none">
+                        <div>
+                            <div class="flex text-brand-fun mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-gray-600 italic mb-6">"Tutornya responsif parah. Kalau error dan bingung,
+                                langsung dibantuin bedah kodenya sampai jalan. Nggak nyesel investasikan waktu di sini."
+                            
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center font-bold text-xl">
+                                B</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Bima Arya</h4>
+                                <p class="text-sm text-gray-500">Siswa SMA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="next-btn"
+                    class="flex absolute -right-3 md:-right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg items-center justify-center text-brand-primary hover:bg-brand-primary hover:text-white transition-all border border-gray-100 focus:outline-none cursor-pointer">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+    <script>
+        const carousel = document.getElementById('testimonial-carousel');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        if (carousel && prevBtn && nextBtn) {
+            const scrollAmount = () => carousel.offsetWidth / 3;
+
+            const updateButtonVisibility = () => {
+                if (carousel.scrollLeft <= 1) {
+                    prevBtn.style.display = 'none';
+                } else {
+                    prevBtn.style.display = '';
+                }
+
+                if (Math.ceil(carousel.scrollLeft + carousel.clientWidth) >= carousel.scrollWidth) {
+                    nextBtn.style.display = 'none';
+                } else {
+                    nextBtn.style.display = '';
+                }
+            };
+
+            updateButtonVisibility();
+
+            carousel.addEventListener('scroll', updateButtonVisibility);
+
+            window.addEventListener('resize', updateButtonVisibility);
+
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+            });
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carousel.classList.add('cursor-grabbing');
+                carousel.classList.remove('cursor-grab', 'scroll-smooth', 'snap-x', 'snap-mandatory');
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+                carousel.classList.add('cursor-grab', 'scroll-smooth', 'snap-x', 'snap-mandatory');
+                carousel.classList.remove('cursor-grabbing');
+            });
+
+            carousel.addEventListener('mouseup', () => {
+                isDown = false;
+                carousel.classList.add('cursor-grab', 'scroll-smooth', 'snap-x', 'snap-mandatory');
+                carousel.classList.remove('cursor-grabbing');
+            });
+
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 2;
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">Dibimbing Langsung oleh Pakarnya</h2>
+                <p class="text-gray-600 text-base md:text-xl">Tinggalkan teori membosankan. Belajar langsung dari praktisi industri
+                    yang sehari-hari bergelut dengan kode.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:border-brand-primary/30 group">
+                    <div class="w-full h-60 md:h-96 bg-gray-200 relative overflow-hidden">
+                        <img src="images/p1.jpg" alt="Farhan K."
+                            class="w-full h-full object-cover object-top group-hover:opacity-90 transition duration-300">
+                    </div>
+                    <div class="p-4 md:p-8 text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Farhan K.</h3>
+                        <p class="text-brand-primary font-semibold mb-4">Senior Python Developer</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Berpengalaman 8 tahun dalam Data Science dan
+                            Backend Engineering. Senang menyederhanakan algoritma rumit untuk pemula.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:border-brand-primary/30 group">
+                    <div class="w-full h-60 md:h-96 bg-gray-200 relative overflow-hidden">
+                        <img src="images/p2.jpg" alt="Nadia Permata"
+                            class="w-full h-full object-cover object-top group-hover:opacity-90 transition duration-300">
+                    </div>
+                    <div class="p-4 md:p-8 text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Nadia Permata</h3>
+                        <p class="text-brand-primary font-semibold mb-4">Frontend Lead</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Mantan UI Designer yang banting setir jadi Web
+                            Developer. Spesialis membuat tampilan antarmuka (UI) yang memanjakan mata.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:border-brand-primary/30 group">
+                    <div class="w-full h-60 md:h-96 bg-gray-200 relative overflow-hidden">
+                        <img src="images/p3.jpg" alt="Adrian S."
+                            class="w-full h-full object-cover object-top group-hover:opacity-90 transition duration-300">
+                    </div>
+                    <div class="p-4 md:p-8 text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Adrian S.</h3>
+                        <p class="text-brand-primary font-semibold mb-4">Fullstack Engineer</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Ahli arsitektur aplikasi berskala besar. Akan
+                            memandumu memahami cara menghubungkan database dengan logika bisnis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-24 px-4 md:px-6 lg:px-12 max-w-7xl mx-auto">
+        <div class="bg-[#312E81] rounded-[40px] p-6 md:p-12 lg:p-20 text-center relative overflow-hidden shadow-2xl">
+
+            <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+                <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-brand-fun rounded-full blur-[120px]">
+                </div>
+                <div
+                    class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-indigo-400 rounded-full blur-[120px]">
+                </div>
+            </div>
+
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-2xl md:text-4xl lg:text-6xl font-bold text-white leading-tight">
+                    Gabung dan mulai perjalanan <br class="hidden md:block"> coding kamu sekarang
+                </h2>
+
+                <p class="text-indigo-100 text-lg md:text-xl max-w-3xl mx-auto opacity-90">
+                    Tunggu apa lagi? Ribuan peluang di industri teknologi menantimu. <br class="hidden md:block">
+                    Ambil langkah pertamamu hari ini bersama JagoAlgo.
+                </p>
+
+                <div class="pt-4">
+                    <a href="catalogue.html"
+                        class="inline-block bg-brand-fun text-[#312E81] px-6 py-3 md:px-12 md:py-5 text-base md:text-xl rounded-2xl font-bold text-xl hover:bg-brand-funhover hover:scale-105 active:scale-95 transition-all shadow-xl shadow-amber-900/40">
+                        Mulai Belajar Sekarang
+                    </a>
+                </div>
+
+                <div
+                    class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-indigo-300 text-sm font-medium opacity-80">
+                    <span> Gratis pendaftaran</span>
+                    <span class="hidden md:inline">•</span>
+                    <span> Akses selamanya</span>
+                    <span class="hidden md:inline">•</span>
+                    <span> Mentor profesional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-10 md:py-12 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-4 md:px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-8">
+                
+               <div class="space-y-3 md:space-y-4">
+                    <a href="index.html" class="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
+                        JagoAlgo
+                    </a>
+                    <p class="text-sm md:text-lg leading-relaxed pr-4 md:pr-0">
+                        Platform belajar coding online yang mengubah kerumitan menjadi keseruan. Siapapun bisa ngoding!
+                    </p>
+                    
+                    <div class="pt-2 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-brand-primary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <p class="text-sm md:text-base leading-relaxed text-gray-400">
+                            Alfa Tower, Lt. 12<br>
+                            Jl. Jalur Sutera Bar., Alam Sutera<br>
+                            Tangerang, Banten, Indonesia 15143
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-lg md:text-xl mb-3 md:mb-4">Jelajahi</h3>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li>
+                            <a href="index.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="catalogue.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Katalog</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Blog</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="hover:text-white hover:translate-x-1 transition-all inline-block text-sm md:text-lg">Hubungi Kami</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-lg md:text-xl mb-3 md:mb-4">Ikuti Keseruan Kami</h3>
+                    <div class="flex flex-col space-y-2 md:space-y-3">
+
+                        <a href="https://www.instagram.com/jagoalgo.id/" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-purple-600 text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">@jagoalgo.id</span>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-blue-600 text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">JagoAlgo Indonesia</span>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-black group-hover:border-gray-600 border border-transparent text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-3 h-3 md:w-4 md:h-4 fill-current" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">@jagoalgo</span>
+                        </a>
+
+                        <a href="#" class="flex items-center gap-3 group transition-all duration-300 hover:translate-x-1">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-800 flex items-center justify-center group-hover:bg-red-600 text-gray-400 group-hover:text-white transition duration-300">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
+                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                                </svg>
+                            </div>
+                            <span class="text-sm md:text-lg font-medium text-gray-400 group-hover:text-white transition">JagoAlgo Academy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
+                <p class="text-xs md:text-md text-center md:text-left">&copy; 2026 JagoAlgo - Platform Belajar Coding Online Terpercaya.</p>
+                <div class="flex space-x-4 md:space-x-6 text-xs md:text-md">
+                    <a href="about.html#faq" class="hover:text-white transition">FAQ</a>
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
